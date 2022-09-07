@@ -23,5 +23,23 @@ namespace TechnologyTest
             testingSmartphone.TakeSelfie();
             Assert.AreEqual(801, testingSmartphone.SelfieNumber);
         }
+
+        //Computer Class
+        [TestMethod]
+        public void TestInheritsId()
+        {
+            Computer testingComputer = new Computer(2, 3, true);
+            Assert.AreEqual(1, testingComputer.Id);
+
+            Computer testingComputer2 = new Computer(4, 6, true);
+            Assert.AreEqual(2, testingComputer2.Id);
+        }
+
+        [TestMethod]
+        public void TestInheritingBaseConstructor()
+        {
+            SmartPhone testingSmartphone = new SmartPhone(2, 3, true, 800);
+            Assert.IsNotNull(testingSmartphone.Id);
+        }
     }
 }
